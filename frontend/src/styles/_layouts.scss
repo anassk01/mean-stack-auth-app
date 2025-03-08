@@ -1,0 +1,63 @@
+
+/* 
+ * frontend/src/styles/_layouts.scss
+ * Layout styles
+ */
+
+// Auth layout
+.auth-layout {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    padding: $spacing-md;
+  }
+  
+  .auth-container {
+    width: 100%;
+    
+    @media (min-width: $breakpoint-sm) {
+      max-width: 450px;
+    }
+  }
+  
+  // Main layout
+  .main-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md $spacing-lg;
+    background-color: $card-bg;
+    box-shadow: $shadow-sm;
+    
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+  
+  .content {
+    flex: 1;
+    padding: $spacing-lg;
+    
+    @media (min-width: $breakpoint-md) {
+      padding: $spacing-xl;
+    }
+  }
+  
+  .footer {
+    padding: $spacing-lg;
+    text-align: center;
+    background-color: $card-bg;
+    border-top: 1px solid $border;
+    color: $text-medium;
+    font-size: 0.875rem;
+  }

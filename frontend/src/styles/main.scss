@@ -1,0 +1,27 @@
+/* 
+ * frontend/src/styles/main.scss
+ * Main stylesheet that imports all partials
+ */
+
+// Reset and base styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+    "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  color: $text-dark;
+  background-color: $background;
+}
+
+// Import partials
+@import 'variables';
+@import 'forms';
+@import 'components';
+@import 'layouts';

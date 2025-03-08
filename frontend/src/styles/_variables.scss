@@ -1,0 +1,50 @@
+/* 
+ * frontend/src/styles/_variables.scss
+ * Core variables for consistent styling
+ */
+
+// Colors - Primary palette
+$primary: #4a90e2;
+$primary-dark: #3a7bc8;
+$primary-light: #7fb1ed;
+
+// Colors - Feedback
+$success: #4caf50;
+$error: #e53935;
+$warning: #fb8c00;
+
+// Colors - UI
+$background: #f5f5f5;
+$card-bg: #ffffff;
+$border: #e0e0e0;
+
+// Colors - Text
+$text-dark: #333333;
+$text-medium: #666666;
+$text-light: #999999;
+
+// Spacing
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+
+// Border radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-normal: 0.25s ease;

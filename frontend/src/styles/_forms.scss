@@ -1,0 +1,120 @@
+
+/* 
+ * frontend/src/styles/_forms.scss
+ * Common form styles
+ */
+
+// Form group
+.form-group {
+    margin-bottom: $spacing-lg;
+    
+    label {
+      display: block;
+      margin-bottom: $spacing-xs;
+      font-weight: 500;
+      color: $text-dark;
+    }
+    
+    input {
+      width: 100%;
+      padding: $spacing-sm $spacing-md;
+      border: 1px solid $border;
+      border-radius: $radius-sm;
+      background-color: $card-bg;
+      font-size: 1rem;
+      transition: border-color $transition-fast, box-shadow $transition-fast;
+      
+      &:focus {
+        outline: none;
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.15);
+      }
+      
+      &.invalid {
+        border-color: $error;
+        
+        &:focus {
+          box-shadow: 0 0 0 3px rgba($error, 0.15);
+        }
+      }
+      
+      &:disabled {
+        background-color: $background;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  // Password field
+  .password-field {
+    position: relative;
+    
+    .toggle-password {
+      position: absolute;
+      right: $spacing-md;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: $text-medium;
+      cursor: pointer;
+      padding: $spacing-xs;
+      
+      &:hover {
+        color: $text-dark;
+      }
+      
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  // Form validation
+  .error-message {
+    margin-top: $spacing-xs;
+    color: $error;
+    font-size: 0.875rem;
+  }
+  
+  // Form row (for inline fields)
+  .form-row {
+    display: flex;
+    gap: $spacing-md;
+    
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .form-group {
+      flex: 1;
+    }
+  }
+  
+  // Form actions
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $spacing-lg 0;
+  }
+  
+  // Password requirements
+  .password-requirements {
+    margin: $spacing-md 0;
+    padding: $spacing-md;
+    background-color: $background;
+    border-radius: $radius-sm;
+    font-size: 0.875rem;
+    
+    div {
+      margin-bottom: $spacing-xs;
+      color: $text-medium;
+      
+      &.met {
+        color: $success;
+      }
+    }
+  }

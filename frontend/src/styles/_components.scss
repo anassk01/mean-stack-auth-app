@@ -1,0 +1,129 @@
+/* 
+ * frontend/src/styles/_components.scss
+ * Common component styles
+ */
+
+// Card
+.auth-card {
+    background-color: $card-bg;
+    border-radius: $radius-md;
+    box-shadow: $shadow-md;
+    padding: $spacing-xl;
+    width: 100%;
+    max-width: 450px;
+    
+    h2 {
+      margin-bottom: $spacing-lg;
+      color: $text-dark;
+      text-align: center;
+    }
+  }
+  
+  // Buttons
+  .btn {
+    display: inline-block;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $radius-sm;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all $transition-normal;
+    border: none;
+    outline: none;
+    
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+  
+  .btn-primary {
+    background-color: $primary;
+    color: white;
+    
+    &:hover:not(:disabled) {
+      background-color: $primary-dark;
+    }
+    
+    &:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+    
+    &:hover:not(:disabled) {
+      background-color: rgba($primary, 0.05);
+    }
+  }
+  
+  .btn-submit {
+    @extend .btn;
+    @extend .btn-primary;
+    width: 100%;
+    padding: $spacing-md;
+    margin-top: $spacing-md;
+  }
+  
+  // Alert boxes
+  .alert {
+    padding: $spacing-md;
+    border-radius: $radius-sm;
+    margin-bottom: $spacing-lg;
+    
+    p {
+      margin-top: $spacing-sm;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+  
+  .alert-success {
+    background-color: rgba($success, 0.1);
+    border-left: 4px solid $success;
+    color: darken($success, 20%);
+  }
+  
+  .alert-error {
+    background-color: rgba($error, 0.1);
+    border-left: 4px solid $error;
+    color: darken($error, 10%);
+  }
+  
+  // Links
+  .auth-links {
+    margin-top: $spacing-lg;
+    text-align: center;
+    font-size: 0.9rem;
+    
+    a {
+      color: $primary;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  // Loading spinner
+  .loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: $spacing-sm;
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  }
